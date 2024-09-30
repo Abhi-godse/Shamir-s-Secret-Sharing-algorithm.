@@ -1,115 +1,63 @@
-Testcase 1
-Given the input:
+To run the solution, follow these steps:
 
-json
+Step 1: Set Up Your Environment
+Since you cannot use Python, you'll need a different programming environment like Java, C++, JavaScript, or any other supported language you're comfortable with. I’ll guide you through the Java solution, as I provided a sample in the previous messages.
+
+1. Install Java and Set Up IDE
+Make sure Java Development Kit (JDK) is installed on your computer.
+Use an IDE like IntelliJ IDEA or Eclipse (you can also use a simple text editor and compile via the terminal).
+2. Download/Clone the GitHub Repository
+Create a GitHub repository where you’ll store your project.
+Clone the repository or create a folder locally where you’ll work on the project.
+Step 2: Create the Java Project
+Create a new project in your IDE (or a new folder if using a text editor).
+Set up your file structure:
+Have two files: testcase1.json and testcase2.json.
+These files should contain the test cases you shared.
+
+Step 4: Compile and Run the Java Program
+If you are using an IDE:
+
+Create the ShamirSecretSharing class in your project.
+Make sure you add the testcase1.json and testcase2.json files into the project folder.
+Run the program.
+If you are using a terminal:
+
+Navigate to your project folder.
+Compile the Java file:
+bash
 Copy code
-{
-    "keys": {
-        "n": 4,
-        "k": 3
-    },
-    "1": {
-        "base": "10",
-        "value": "4"
-    },
-    "2": {
-        "base": "2",
-        "value": "111"
-    },
-    "3": {
-        "base": "10",
-        "value": "12"
-    },
-    "6": {
-        "base": "4",
-        "value": "213"
-    }
-}
-Decoded Points:
-
-(1, 4)
-(2, 7) (since 111 in base 2 = 7)
-(3, 12)
-(6, 35) (213 in base 4 = 2 * 16 + 1 * 4 + 3 = 35)
-Constant Term 
-𝑐
-c: 7
-
-Testcase 2
-Given the input:
-
-json
+javac ShamirSecretSharing.java
+Run the Java program:
+bash
 Copy code
-{
-    "keys": {
-        "n": 9,
-        "k": 6
-    },
-    "1": {
-        "base": "10",
-        "value": "28735619723837"
-    },
-    "2": {
-        "base": "16",
-        "value": "1A228867F0CA"
-    },
-    "3": {
-        "base": "12",
-        "value": "32811A4AA0B7B"
-    },
-    "4": {
-        "base": "11",
-        "value": "917978721331A"
-    },
-    "5": {
-        "base": "16",
-        "value": "1A22886782E1"
-    },
-    "6": {
-        "base": "10",
-        "value": "28735619654702"
-    },
-    "7": {
-        "base": "14",
-        "value": "71AB5070CC4B"
-    },
-    "8": {
-        "base": "9",
-        "value": "122662581541670"
-    },
-    "9": {
-        "base": "8",
-        "value": "642121030037605"
-    }
-}
-Decoded Points:
+java ShamirSecretSharing
+Step 5: Push Your Code to GitHub
+Once the program is working correctly and producing the expected output, follow these steps to push the code to GitHub:
 
-(1, 28735619723837)
-(2, 1153048137122222) (1A228867F0CA in base 16)
-(3, 1188935695367477) (32811A4AA0B7B in base 12)
-(4, 188673868183541) (917978721331A in base 11)
-(5, 1153048137092769) (1A22886782E1 in base 16)
-(6, 28735619654702)
-(7, 3277708911435978) (71AB5070CC4B in base 14)
-(8, 122662581541670)
-(9, 10661599145106489) (642121030037605 in base 8)
-Constant Term 
-𝑐
-c: 8
+Initialize Git in your project folder:
 
-Wrong Points: Any points that do not satisfy the polynomial equation when calculated using the derived 
-𝑐
-c.
+bash
+Copy code
+git init
+Add files to the Git repository:
 
-Summary of Outputs
-Testcase 1 Constant: 7
-Testcase 2 Constant: 8
-Wrong Points in Testcase 2: Will depend on the specific polynomial derived from the correct points and which points do not lie on the polynomial curve.
-If you would like to verify the wrong points, you would need to run the polynomial fitting to see which points don't match.
+bash
+Copy code
+git add .
+Commit the changes:
 
-Final Confirmation
-Based on your provided outputs:
+bash
+Copy code
+git commit -m "Initial commit - Shamir Secret Sharing solution"
+Push to GitHub:
 
-Testcase 1: Correct (7)
-Testcase 2: Correct (8), but I would need to verify the wrong points since they depend on the exact polynomial fitted to the points.
-Please run the polynomial fitting calculation in your code to identify any wrong points accurately. If you need help with this, let me know!
+bash
+Copy code
+git remote add origin <YOUR_REPOSITORY_URL>
+git branch -M main
+git push -u origin main
+Step 6: Submit the Solution
+Once the code is pushed to GitHub, submit the link to the repository via the submission form.
+
+Let me know if you need further assistance with running or modifying the program!
